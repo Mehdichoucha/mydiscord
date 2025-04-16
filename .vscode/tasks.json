@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build GTK Program",
+        "type": "shell",
+        "command": "gcc `pkg-config --cflags gtk+-3.0` azerfgh.c -o azerfgh `pkg-config --libs gtk+-3.0`",
+        "options": {
+          "shell": {
+            "executable": "C:\\msys64\\usr\\bin\\bash.exe",
+            "args": ["-c"]
+          }
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": []
+      }
+    ]
+  }
