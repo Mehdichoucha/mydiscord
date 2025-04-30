@@ -1,3 +1,0 @@
-C:/Users/linda/OneDrive/Bureau/Nouveau dossier/build/CMakeFiles/client.dir
-C:/Users/linda/OneDrive/Bureau/Nouveau dossier/build/CMakeFiles/edit_cache.dir
-C:/Users/linda/OneDrive/Bureau/Nouveau dossier/build/CMakeFiles/rebuild_cache.dir
