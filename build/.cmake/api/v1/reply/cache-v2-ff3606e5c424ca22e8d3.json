@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/linda/OneDrive/Bureau/discord/build"
+			"value" : "c:/Users/linda/OneDrive/Bureau/mydiscord/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -167,10 +167,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "C:/msys64/mingw64/bin/gcc.exe"
 		},
 		{
@@ -455,7 +455,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/linda/OneDrive/Bureau/discord/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/linda/OneDrive/Bureau/mydiscord/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -527,7 +527,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/linda/OneDrive/Bureau/discord"
+			"value" : "C:/Users/linda/OneDrive/Bureau/mydiscord"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1663,7 +1663,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/linda/OneDrive/Bureau/discord/build"
+			"value" : "C:/Users/linda/OneDrive/Bureau/mydiscord/build"
 		},
 		{
 			"name" : "mon_app_IS_TOP_LEVEL",
@@ -1687,7 +1687,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/linda/OneDrive/Bureau/discord"
+			"value" : "C:/Users/linda/OneDrive/Bureau/mydiscord"
 		},
 		{
 			"name" : "pkgcfg_lib_GTK4_cairo",

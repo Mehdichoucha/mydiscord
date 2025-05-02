@@ -1,5 +1,5 @@
 CMakeFiles/client.dir/client/src/main.c.obj: \
- C:\Users\linda\OneDrive\Bureau\discord\client\src\main.c \
+ C:\Users\linda\OneDrive\Bureau\mydiscord\client\src\main.c \
  C:/msys64/mingw64/include/gtk-4.0/gtk/gtk.h \
  C:/msys64/mingw64/include/gtk-4.0/gtk/css/gtkcss.h \
  C:/msys64/mingw64/include/glib-2.0/glib.h \

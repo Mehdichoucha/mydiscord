@@ -3,7 +3,7 @@ project(mon_app C)
 
 set(CMAKE_C_STANDARD 11)
 
-# Utilise pkg-config pour trouver GTK4
+# Utilise pkg-config pour trouver GTK4     
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK4 REQUIRED gtk4)
 
@@ -21,4 +21,4 @@ target_link_libraries(client PRIVATE ${GTK4_LIBRARIES})
 # === Server ===
 # file(GLOB SERVER_SOURCES "server/src/*.c")
 # add_executable(server ${SERVER_SOURCES})
-# include_directories(server/include)
+# include_directories(serve

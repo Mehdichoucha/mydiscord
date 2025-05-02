@@ -1,8 +1,8 @@
 [
 {
-  "directory": "C:/Users/linda/OneDrive/Bureau/discord/build",
-  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/client.dir/includes_C.rsp -g -std=gnu11   -mfpmath=sse -msse -msse2 -o CMakeFiles\\client.dir\\client\\src\\main.c.obj -c C:\\Users\\linda\\OneDrive\\Bureau\\discord\\client\\src\\main.c",
-  "file": "C:/Users/linda/OneDrive/Bureau/discord/client/src/main.c",
+  "directory": "C:/Users/linda/OneDrive/Bureau/mydiscord/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/client.dir/includes_C.rsp -g -std=gnu11   -mfpmath=sse -msse -msse2 -o CMakeFiles\\client.dir\\client\\src\\main.c.obj -c C:\\Users\\linda\\OneDrive\\Bureau\\mydiscord\\client\\src\\main.c",
+  "file": "C:/Users/linda/OneDrive/Bureau/mydiscord/client/src/main.c",
   "output": "CMakeFiles/client.dir/client/src/main.c.obj"
 }
 ]
