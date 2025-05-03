@@ -5,4 +5,9 @@
 
 void show_testformuulaire(GtkWidget *button, gpointer user_data);
 void show_main_page(GtkWidget *button, gpointer user_data);
+void show_log_form(GtkWidget *button, gpointer user_data);
+void show_message_interface(GtkWidget *button, gpointer user_data);
+GtkWidget *create_interface_message(void);
+
+
 #endif
