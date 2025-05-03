@@ -10,15 +10,26 @@ enum { ENTRY_USERNAME, ENTRY_EMAIL, ENTRY_PASSWORD, NUM_ENTRIES };
 
 void show_main_page(GtkWidget *button, gpointer user_data);
 void show_log_form(GtkWidget *button, gpointer user_data);
+void show_message_interface(GtkWidget *button, gpointer user_data) {
+    GtkWidget *child;
+    while ((child = gtk_widget_get_first_child(button)) != NULL) {
+        gtk_widget_unparent(child);
+    }
+
+    GtkWidget *interface_msg = create_interface_message();
+    gtk_box_append(GTK_BOX(button), interface_msg);
+}
+
+
 
 static void on_register_clicked(GtkButton *button, gpointer user_data) {
     GtkWidget **entries = (GtkWidget **)user_data;
 
-    const gchar *username = gtk_editable_get_text(GTK_EDITABLE(entries[ENTRY_USERNAME]));
+    const gchar *username_tmp = gtk_editable_get_text(GTK_EDITABLE(entries[ENTRY_USERNAME]));
     const gchar *email = gtk_editable_get_text(GTK_EDITABLE(entries[ENTRY_EMAIL]));
     const gchar *password = gtk_editable_get_text(GTK_EDITABLE(entries[ENTRY_PASSWORD]));
 
-    if (strlen(username) == 0 || strlen(email) == 0 || strlen(password) == 0) {
+    if (strlen(username_tmp) == 0 || strlen(email) == 0 || strlen(password) == 0) {
         GtkWidget *dialog = gtk_message_dialog_new_with_markup(NULL,
             GTK_DIALOG_MODAL,
             GTK_MESSAGE_ERROR,
@@ -29,7 +40,9 @@ static void on_register_clicked(GtkButton *button, gpointer user_data) {
         return;
     }
 
-    PGconn *conn = PQconnectdb("dbname=mydiscord user=postgres password= host=localhost port=5432");
+    gchar *username = g_strdup(username_tmp);  // Copie le nom pour l'utiliser plus tard
+
+    PGconn *conn = PQconnectdb("dbname=mydiscord user=postgres password=BayernMunich42 host=localhost port=5432");
 
     if (PQstatus(conn) != CONNECTION_OK) {
         GtkWidget *dialog = gtk_message_dialog_new(NULL,
@@ -39,6 +52,7 @@ static void on_register_clicked(GtkButton *button, gpointer user_data) {
             "Erreur de connexion à la base de données !");
         gtk_window_set_title(GTK_WINDOW(dialog), "Erreur");
         gtk_window_present(GTK_WINDOW(dialog));
+        g_free(username);
         PQfinish(conn);
         return;
     }
@@ -75,28 +89,28 @@ static void on_register_clicked(GtkButton *button, gpointer user_data) {
             GTK_DIALOG_MODAL,
             GTK_MESSAGE_ERROR,
             GTK_BUTTONS_OK,
-            "Erreur lors de l'enregistrement : %s", PQerrorMessage(conn));  // <--- Ajout du message d'erreur
+            "Erreur lors de l'enregistrement : %s", PQerrorMessage(conn));
         gtk_window_set_title(GTK_WINDOW(dialog), "Erreur");
         gtk_window_present(GTK_WINDOW(dialog));
     } else {
-        // Nouvelle fenêtre avec message de bienvenue
-        GtkWidget *welcome_window = gtk_window_new();
-        gtk_window_set_title(GTK_WINDOW(welcome_window), "Bienvenue");
-        gtk_window_set_default_size(GTK_WINDOW(welcome_window), 300, 200);
+        GtkWidget *parent_box = gtk_widget_get_parent(entries[ENTRY_USERNAME]);
 
-        GtkWidget *box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 10);
-        gtk_widget_set_valign(box, GTK_ALIGN_CENTER);
-        gtk_widget_set_halign(box, GTK_ALIGN_CENTER);
+        GtkWidget *child;
+        while ((child = gtk_widget_get_first_child(parent_box)) != NULL) {
+            gtk_widget_unparent(child);
+        }
 
         gchar *message = g_strdup_printf("Bienvenue, %s !", username);
         GtkWidget *label = gtk_label_new(message);
         g_free(message);
+        gtk_box_append(GTK_BOX(parent_box), label);
 
-        gtk_box_append(GTK_BOX(box), label);
-        gtk_window_set_child(GTK_WINDOW(welcome_window), box);
-        gtk_window_present(GTK_WINDOW(welcome_window));
+        GtkWidget *msg_button = gtk_button_new_with_label("Message");
+        gtk_box_append(GTK_BOX(parent_box), msg_button);
+        g_signal_connect_swapped(msg_button, "clicked", G_CALLBACK(show_message_interface), parent_box);
     }
 
+    g_free(username); // Libération mémoire
     PQclear(res);
     PQfinish(conn);
 }
