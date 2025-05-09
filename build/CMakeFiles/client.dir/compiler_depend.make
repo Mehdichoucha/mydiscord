@@ -694,6 +694,7 @@ CMakeFiles/client.dir/client/src/main.c.obj: C:/Users/linda/OneDrive/Bureau/mydi
   C:/msys64/mingw64/include/harfbuzz/hb-version.h \
   C:/msys64/mingw64/include/harfbuzz/hb.h \
   C:/msys64/mingw64/include/inttypes.h \
+  C:/msys64/mingw64/include/libpq-fe.h \
   C:/msys64/mingw64/include/limits.h \
   C:/msys64/mingw64/include/malloc.h \
   C:/msys64/mingw64/include/math.h \
@@ -727,6 +728,8 @@ CMakeFiles/client.dir/client/src/main.c.obj: C:/Users/linda/OneDrive/Bureau/mydi
   C:/msys64/mingw64/include/pango-1.0/pango/pango-version-macros.h \
   C:/msys64/mingw64/include/pango-1.0/pango/pango.h \
   C:/msys64/mingw64/include/pango-1.0/pango/pangocairo.h \
+  C:/msys64/mingw64/include/pg_config_ext.h \
+  C:/msys64/mingw64/include/postgres_ext.h \
   C:/msys64/mingw64/include/pthread_compat.h \
   C:/msys64/mingw64/include/pthread_signal.h \
   C:/msys64/mingw64/include/pthread_time.h \
@@ -1177,6 +1180,8 @@ C:/msys64/mingw64/include/glib-2.0/glib/gbookmarkfile.h:
 
 C:/msys64/mingw64/include/glib-2.0/gobject/gsignal.h:
 
+C:/msys64/mingw64/include/libpq-fe.h:
+
 C:/msys64/mingw64/include/gtk-4.0/gtk/gtklistitemfactory.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gio-autocleanups.h:
@@ -1230,6 +1235,8 @@ C:/msys64/mingw64/include/glib-2.0/gio/gloadableicon.h:
 C:/msys64/mingw64/include/pango-1.0/pango/pango-language.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gmemoryinputstream.h:
+
+C:/msys64/mingw64/include/pg_config_ext.h:
 
 C:/msys64/mingw64/include/gtk-4.0/gtk/gtkgestureswipe.h:
 
@@ -2246,6 +2253,8 @@ C:/msys64/mingw64/include/pango-1.0/pango/pango-tabs.h:
 C:/msys64/mingw64/include/pango-1.0/pango/pango-version-macros.h:
 
 C:/msys64/mingw64/include/pango-1.0/pango/pangocairo.h:
+
+C:/msys64/mingw64/include/postgres_ext.h:
 
 C:/msys64/mingw64/include/pthread_signal.h:
 

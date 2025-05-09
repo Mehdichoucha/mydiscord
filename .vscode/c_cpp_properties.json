@@ -4,14 +4,37 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/msys64/ucrt64/**"
+                "C:/msys64/mingw64/include",  // Racine des includes MSYS2
+                "C:/msys64/mingw64/include/gtk-4.0",  // GTK4
+                "C:/msys64/mingw64/include/glib-2.0",  // GLib (nécessaire à GTK)
+                "C:/msys64/mingw64/lib/glib-2.0/include",  // Inclut les .h complémentaires
+                "C:/msys64/mingw64/include/pango-1.0",  // Pour le texte GTK
+                "C:/msys64/mingw64/include/harfbuzz",  // Dépendance GTK
+                "C:/msys64/mingw64/include/cairo",  // Dessin GTK
+                "C:/msys64/mingw64/include/gdk-pixbuf-2.0",  // Images GTK
+                "C:/msys64/mingw64/include/graphene-1.0",  // Pour GTK (transformations)
+                "C:/msys64/mingw64/lib/graphene-1.0/include",  // Idem
+                "C:/msys64/mingw64/include/libpq",  // PostgreSQL via MSYS2
+                "C:/Program Files/PostgreSQL/15/include",  // PostgreSQL officiel (si installé aussi ici)
+                "C:/Program Files/PostgreSQL/15/include/libpq"  // Headers de libpq
             ],
-            "compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
+            "compilerPath": "C:/msys64/mingw64/bin/gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64",
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
-            ]
+            ],
+            "browse": {
+                "path": [
+                    "C:/msys64/mingw64/include",
+                    "C:/msys64/mingw64/include/gtk-4.0",
+                    "C:/Program Files/PostgreSQL/15/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
         }
     ],
     "version": 4

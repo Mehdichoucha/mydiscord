@@ -16,7 +16,7 @@
 			"add_executable",
 			"target_link_libraries",
 			"add_definitions",
-			"include_directories"
+			"target_include_directories"
 		],
 		"files" : 
 		[
@@ -30,31 +30,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 17,
+				"line" : 18,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 19,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 13,
+				"line" : 34,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 11,
-				"parent" : 0
-			},
-			{
-				"command" : 3,
-				"file" : 0,
-				"line" : 18,
+				"line" : 21,
 				"parent" : 0
 			}
 		]
@@ -134,7 +128,7 @@
 					"path" : "C:/msys64/mingw64/lib/glib-2.0/include"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 4,
 					"path" : "C:/Users/linda/OneDrive/Bureau/mydiscord/client/include"
 				}
 			],
@@ -230,6 +224,11 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "-lintl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lpq",
 				"role" : "libraries"
 			},
 			{
